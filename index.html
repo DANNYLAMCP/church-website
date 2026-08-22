@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中華基督教禮賢會荃灣堂 | Rhenish Church Tsuen Wan</title>
+  <meta name="description" content="中華基督教禮賢會荃灣堂——以使徒信經為信仰大綱，唯獨聖經、唯獨恩典、唯獨信心、唯獨基督。歡迎你加入教會，認識生命真理。" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans TC & Noto Serif TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'sans-serif'],
+            serif: ['"Noto Serif TC"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              600: '#1e40af',
+              800: '#1e293b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFA] text-slate-700 font-sans antialiased selection:bg-brand-100 selection:text-brand-800">
+
+  <!-- 導航欄 (Navbar) -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 border border-blue-100 group-hover:bg-blue-100 transition">
+          <i data-lucide="cross" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="block text-lg font-bold text-slate-900 font-serif leading-tight">禮賢會荃灣堂</span>
+          <span class="block text-xs text-slate-400 uppercase tracking-wider font-sans">Rhenish Church Tsuen Wan</span>
+        </div>
+      </a>
+
+      <!-- 電腦端選單 -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#vision" class="hover:text-blue-700 transition">教會異象</a>
+        <a href="#gatherings" class="hover:text-blue-700 transition">聚會時間</a>
+        <a href="#bulletin" class="hover:text-blue-700 transition">每週週刊</a>
+        <a href="#contact" class="hover:text-blue-700 transition">來訪與聯絡</a>
+      </nav>
+
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium px-5 py-2.5 rounded-full transition shadow-sm">
+          首次來訪
+        </a>
+      </div>
+
+      <!-- 流動端選單按鈕 -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="切換選單">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- 流動端下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 text-sm">
+      <a href="#vision" class="block py-2 text-slate-600 mobile-link">教會異象</a>
+      <a href="#gatherings" class="block py-2 text-slate-600 mobile-link">聚會時間</a>
+      <a href="#bulletin" class="block py-2 text-slate-600 mobile-link">每週週刊</a>
+      <a href="#contact" class="block py-2 text-slate-600 mobile-link">來訪與聯絡</a>
+      <a href="#contact" class="block w-full text-center bg-slate-900 text-white py-2.5 rounded-full font-medium mobile-link">
+        首次來訪指引
+      </a>
+    </div>
+  </header>
+
+  <!-- 主視覺區 (Hero Section) -->
+  <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 bg-gradient-to-b from-white via-slate-50/50 to-[#FAFAFA]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 text-blue-800 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 shadow-xs">
+        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+        <span>主日崇拜 ｜ 逢週日上午 10:00 - 11:30</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 font-serif leading-tight sm:leading-snug mb-6 tracking-tight">
+        在真道中造就生命<br class="hidden sm:inline" />
+        在恩典中活出召命
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-10 font-light">
+        以使徒信經為信仰大綱，持守「唯獨聖經 ‧ 唯獨恩典 ‧ 唯獨信心 ‧ 唯獨基督」。<br class="hidden sm:inline" />
+        歡迎你加入屬靈家庭，認識生命真理，信靠基督，得享永生。
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-blue-700 hover:bg-blue-800 text-white font-medium px-6 py-3.5 rounded-xl transition shadow-sm hover:shadow">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          <span>計劃你的第一次來訪</span>
+        </a>
+        <a href="#bulletin" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium px-6 py-3.5 rounded-xl transition shadow-xs">
+          <i data-lucide="file-text" class="w-4 h-4 text-slate-400"></i>
+          <span>查閱本週週刊</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教會目標：W.E.L.L. (4大支柱) -->
+  <section id="vision" class="py-16 bg-white border-y border-slate-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Our Vision</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">W.E.L.L. 教會目標</p>
+        <p class="text-sm text-slate-500 mt-2">扎根聖經真理，建立一個敬拜、宣教、關愛與學習並重的屬靈群體</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- W: Worship -->
+        <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-100 hover:border-slate-200 transition-all hover:shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-4 font-serif font-bold text-xl">
+            W
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Worship 敬拜</h3>
+          <p class="text-xs font-medium text-slate-400 mb-3">以心靈誠實回應恩典</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            透過主日崇拜與同心禱告，將榮耀歸於三一真神，建立以基督為中心的敬拜生活。
+          </p>
+        </div>
+
+        <!-- E: Evangelism -->
+        <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-100 hover:border-slate-200 transition-all hover:shadow-sm">
+          <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-4 font-serif font-bold text-xl">
+            E
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Evangelism 宣教</h3>
+          <p class="text-xs font-medium text-slate-400 mb-3">走進社區傳揚福音</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            立足荃灣社區，實踐主基督的大使命，向鄰舍見證主愛，引導人認識真理與救恩。
+          </p>
+        </div>
+
+        <!-- L: Love -->
+        <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-100 hover:border-slate-200 transition-all hover:shadow-sm">
+          <div class="w-12 h-12 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center mb-4 font-serif font-bold text-xl">
+            L
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Love 關愛</h3>
+          <p class="text-xs font-medium text-slate-400 mb-3">在主愛中彼此扶持</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            實踐重價恩典的團契生活，互相體恤照顧、同經風雨，展現屬靈家庭的溫暖與同行。
+          </p>
+        </div>
+
+        <!-- L: Learn -->
+        <div class="bg-[#FAFAFA] rounded-2xl p-6 border border-slate-100 hover:border-slate-200 transition-all hover:shadow-sm">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center mb-4 font-serif font-bold text-xl">
+            L
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Learn 學習</h3>
+          <p class="text-xs font-medium text-slate-400 mb-3">在真道上恆常造就</p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            勤讀聖經真理，開辦主日學與門徒培育課程，讓生命在真道上扎根成長。
+          </p>
+        </div>
+      </div>
+
+      <!-- 潘霍華神學警句 -->
+      <div class="mt-12 bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto text-center">
+        <i data-lucide="quote" class="w-6 h-6 text-slate-300 mx-auto mb-3"></i>
+        <blockquote class="text-sm sm:text-base text-slate-700 font-serif leading-relaxed italic">
+          「廉價的恩典乃教會的死敵……重價的恩典是埋藏在地裏的寶貝，人為這寶貝的緣故，就歡歡喜喜去賣掉他一切所有的。」
+        </blockquote>
+        <div class="text-xs text-slate-400 font-medium mt-3">— 德國信義宗神學家 潘霍華牧師</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聚會時間表 (Gatherings) -->
+  <section id="gatherings" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Schedule</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">恆常聚會時間</p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 divide-y divide-slate-100 shadow-sm overflow-hidden">
+        <!-- 崇拜 -->
+        <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/50 transition">
+          <div class="flex items-start space-x-4">
+            <div class="p-2.5 bg-blue-50 text-blue-700 rounded-lg shrink-0 mt-0.5">
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base">主日崇拜</h4>
+              <p class="text-xs text-slate-500">詩歌讚美、讀經祈禱、聖經證道、家事報告</p>
+            </div>
+          </div>
+          <div class="sm:text-right pl-11 sm:pl-0">
+            <span class="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-md">逢週日 10:00 - 11:30</span>
+          </div>
+        </div>
+
+        <!-- 兒童主日學 -->
+        <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/50 transition">
+          <div class="flex items-start space-x-4">
+            <div class="p-2.5 bg-amber-50 text-amber-700 rounded-lg shrink-0 mt-0.5">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base">兒童主日學</h4>
+              <p class="text-xs text-slate-500">幼兒至小學生（聖經故事、品格律動與手工）</p>
+            </div>
+          </div>
+          <div class="sm:text-right pl-11 sm:pl-0">
+            <span class="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-md">逢週日 10:00 - 11:30</span>
+          </div>
+        </div>
+
+        <!-- 青年團契 -->
+        <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/50 transition">
+          <div class="flex items-start space-x-4">
+            <div class="p-2.5 bg-emerald-50 text-emerald-700 rounded-lg shrink-0 mt-0.5">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base">青年與職青小組</h4>
+              <p class="text-xs text-slate-500">中學、大專及初職青年專題查經與生活分享</p>
+            </div>
+          </div>
+          <div class="sm:text-right pl-11 sm:pl-0">
+            <span class="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-md">逢週六 / 週五晚上</span>
+          </div>
+        </div>
+
+        <!-- 祈禱會 -->
+        <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/50 transition">
+          <div class="flex items-start space-x-4">
+            <div class="p-2.5 bg-purple-50 text-purple-700 rounded-lg shrink-0 mt-0.5">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base">全堂祈禱會</h4>
+              <p class="text-xs text-slate-500">同心為堂會發展、肢體需要及宣教事工代禱</p>
+            </div>
+          </div>
+          <div class="sm:text-right pl-11 sm:pl-0">
+            <span class="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-md">逢週三晚上 8:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 每週週刊與奉獻 (Bulletin & Support) -->
+  <section id="bulletin" class="py-16 bg-white border-t border-slate-200/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Bulletin & Support</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">每週週刊與奉獻支持</p>
+      </div>
+
+      <!-- 週刊置頂下載區 -->
+      <div class="bg-gradient-to-br from-blue-50/80 to-slate-50 border border-blue-100 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-xs mb-8">
+        <div>
+          <div class="inline-block bg-blue-700 text-white text-[11px] font-semibold uppercase px-2.5 py-0.5 rounded-full mb-2">
+            最新一期
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-1">主日崇拜家事週刊</h3>
+          <p class="text-xs text-slate-500">包含主日講道大綱、家事報告、代禱事項及最新消息</p>
+        </div>
+        <a href="uploads/bulletin-latest.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-blue-700 hover:bg-blue-800 text-white font-medium px-5 py-3 rounded-xl transition shrink-0 shadow-sm">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>下載最新週刊 (PDF)</span>
+        </a>
+      </div>
+
+      <!-- 奉獻途徑 -->
+      <div class="border border-slate-200 rounded-2xl p-6 bg-[#FAFAFA]">
+        <div class="flex items-center space-x-2.5 mb-3">
+          <i data-lucide="gift" class="w-5 h-5 text-amber-600"></i>
+          <h4 class="font-bold text-slate-900 text-base">奉獻支持途徑</h4>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+          支持教會事工可透過轉數快 (FPS) 或銀行轉帳。如需奉獻收據，請於入數後將收條截圖發送至幹事處。
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">轉數快 (FPS) 識別碼</span>
+            <strong class="text-slate-800 font-mono text-sm">fps@rhenish-twc.org</strong>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">戶口名稱</span>
+            <strong class="text-slate-800 text-sm">中華基督教禮賢會荃灣堂</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 來訪與聯絡 (Contact & Map) -->
+  <section id="contact" class="py-16 bg-[#FAFAFA] border-t border-slate-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <!-- 聯絡資訊 -->
+        <div>
+          <h2 class="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Visit & Connect</h2>
+          <p class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif mb-6">歡迎與我們聯絡</p>
+
+          <div class="space-y-4 text-sm text-slate-600">
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2 bg-white border border-slate-200 rounded-lg text-blue-700 shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-slate-900 font-medium">堂會地址</strong>
+                <span>香港新界荃灣（鄰近荃灣港鐵站）</span>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2 bg-white border border-slate-200 rounded-lg text-blue-700 shrink-0 mt-0.5">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-slate-900 font-medium">電話查詢</strong>
+                <a href="tel:21496440" class="text-blue-700 font-semibold hover:underline">2149 6440</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2 bg-white border border-slate-200 rounded-lg text-blue-700 shrink-0 mt-0.5">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <strong class="block text-slate-900 font-medium">電郵聯絡</strong>
+                <a href="mailto:info@rhenish-twc.org" class="text-blue-700 hover:underline">info@rhenish-twc.org</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 惡劣天氣指引 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="flex items-center space-x-2.5 mb-3">
+            <i data-lucide="cloud-rain" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-slate-900 text-base">惡劣天氣聚會安排指引</h3>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed mb-4">
+            若天文台於主日早上 8:00 仍懸掛八號或以上風球、或發出黑色暴雨警告信號，實體主日崇拜將會暫停，改為網上聚會或另行通告。
+          </p>
+          <div class="text-xs text-slate-400 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            如有即時疑問，歡迎於聚會前致電幹事處查詢。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁腳 (Footer) -->
+  <footer class="bg-white border-t border-slate-200 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>
+        © 2026 中華基督教禮賢會荃灣堂. All Rights Reserved.
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="#vision" class="hover:text-slate-600">信仰大綱</a>
+        <a href="#contact" class="hover:text-slate-600">交通指引</a>
+        <!-- 同工後台入口 -->
+        <a href="admin/" class="text-slate-300 hover:text-blue-700 inline-flex items-center space-x-1" title="同工內部管理後台">
+          <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+          <span>同工後台</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+  </script>
+</body>
+</html>

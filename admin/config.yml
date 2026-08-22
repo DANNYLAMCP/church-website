@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: DANNYLAMCP/church-website
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+locale: "zh_Hant"
+
+collections:
+  - name: "bulletins"
+    label: "每週週刊 (PDF)"
+    folder: "content/bulletins"
+    create: true
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-bulletin"
+    fields:
+      - { label: "主日崇拜日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "主日講題", name: "title", widget: "string" }
+      - { label: "宣講講員", name: "speaker", widget: "string" }
+      - { label: "週刊 PDF 檔案", name: "pdf_file", widget: "file", choose_url: false }
+
+  - name: "announcements"
+    label: "最新消息與公告"
+    folder: "content/announcements"
+    create: true
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "公告標題", name: "title", widget: "string" }
+      - { label: "發佈日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "重要置頂", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "公告詳細內容", name: "body", widget: "markdown" }
+
+  - name: "sermons"
+    label: "主日講道影音"
+    folder: "content/sermons"
+    create: true
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}-sermon"
+    fields:
+      - { label: "宣講日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "經文與講題", name: "title", widget: "string" }
+      - { label: "講員", name: "speaker", widget: "string" }
+      - { label: "YouTube 影片連結", name: "video_url", widget: "string", required: false }
