@@ -2,7 +2,7 @@ backend:
   name: github
   repo: DANNYLAMCP/church-website
   branch: main
-  base_url: https://sveltia-cms-auth.lcp51165801.workers.dev
+  base_url: https://rhenish-cms-auth.lcp51165801.workers.dev
 
 media_folder: "uploads"
 public_folder: "/church-website/uploads"
