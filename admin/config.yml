@@ -9,8 +9,51 @@ public_folder: "/church-website/uploads"
 locale: "zh_Hant"
 
 collections:
+  # ==========================================
+  # 1. 單頁內容管理（首頁 W.E.L.L. 與名言）
+  # ==========================================
+  - name: "pages"
+    label: "📄 頁面內容修改"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "🏠 首頁 - 教會目標 (W.E.L.L.)"
+        file: "content/pages/home.json"
+        fields:
+          - { label: "主標題", name: "title", widget: "string", default: "W.E.L.L. 教會目標" }
+          - { label: "副標題", name: "subtitle", widget: "string", default: "扎根聖經真理，建立榮神益人的信仰群體" }
+
+          # W - Worship
+          - { label: "【W】標題", name: "w_title", widget: "string", default: "Worship 敬拜" }
+          - { label: "【W】副標題", name: "w_tagline", widget: "string", default: "以心靈誠實回應恩典" }
+          - { label: "【W】內文說明", name: "w_desc", widget: "text", default: "透過主日崇拜與同心禱告，將榮耀歸於三一上帝，建立以基督為中心的敬拜生活。" }
+
+          # E - Evangelism
+          - { label: "【E】標題", name: "e_title", widget: "string", default: "Evangelism 宣教" }
+          - { label: "【E】副標題", name: "e_tagline", widget: "string", default: "走進社區傳揚福音" }
+          - { label: "【E】內文說明", name: "e_desc", widget: "text", default: "立足荃灣社區，實踐主耶穌基督的大使命，向鄰舍見證主愛，引導人得著救恩。" }
+
+          # L - Love
+          - { label: "【L】標題", name: "l1_title", widget: "string", default: "Love 關愛" }
+          - { label: "【L】副標題", name: "l1_tagline", widget: "string", default: "在主愛中彼此扶持" }
+          - { label: "【L】內文說明", name: "l1_desc", widget: "text", default: "實踐重價恩典的團契生活，彼此體恤照顧、同經風雨，展現屬靈家庭的溫暖與同行。" }
+
+          # L - Learn
+          - { label: "【L】標題", name: "l2_title", widget: "string", default: "Learn 學習" }
+          - { label: "【L】副標題", name: "l2_tagline", widget: "string", default: "在真道上恆常造就" }
+          - { label: "【L】內文說明", name: "l2_desc", widget: "text", default: "勤讀聖經真理，開辦主日學與門徒培育課程，讓生命在真道上扎根成長。" }
+
+          # 名言引用區塊
+          - { label: "💬 下方名言內容", name: "quote", widget: "text", default: "廉價的恩典乃教會的死敵……重價的恩典是埋藏在地裏的寶貝，人為這寶貝的緣故，就歡歡喜喜去賣掉他一切所有的。" }
+          - { label: "👤 名言作者", name: "quote_author", widget: "string", default: "德國信義宗神學家 潘霍華牧師" }
+
+  # ==========================================
+  # 2. 定期發布內容（週刊、公告、講道）
+  # ==========================================
   - name: "bulletins"
-    label: "每週週刊 (PDF)"
+    label: "📰 每週週刊 (PDF)"
     folder: "content/bulletins"
     create: true
     format: "json"
@@ -22,7 +65,7 @@ collections:
       - { label: "週刊 PDF 檔案", name: "pdf_file", widget: "file", choose_url: false }
 
   - name: "announcements"
-    label: "最新消息與公告"
+    label: "📢 最新消息與公告"
     folder: "content/announcements"
     create: true
     format: "json"
@@ -34,7 +77,7 @@ collections:
       - { label: "公告詳細內容", name: "body", widget: "markdown" }
 
   - name: "sermons"
-    label: "主日講道影音"
+    label: "🎥 主日講道影音"
     folder: "content/sermons"
     create: true
     format: "json"
