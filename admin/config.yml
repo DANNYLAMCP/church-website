@@ -10,50 +10,91 @@ locale: "zh_Hant"
 
 collections:
   # ==========================================
-  # 1. 單頁內容管理（首頁 W.E.L.L. 與名言）
+  # 1. 首頁從上到下完整內容修改
   # ==========================================
   - name: "pages"
-    label: "📄 頁面內容修改"
+    label: "📄 網站頁面管理"
     delete: false
     editor:
       preview: false
     files:
       - name: "home"
-        label: "🏠 首頁 - 教會目標 (W.E.L.L.)"
+        label: "🏠 首頁全部內容（依網頁上下順序）"
         file: "content/pages/home.json"
         fields:
-          - { label: "主標題", name: "title", widget: "string", default: "W.E.L.L. 教會目標" }
-          - { label: "副標題", name: "subtitle", widget: "string", default: "扎根聖經真理，建立榮神益人的信仰群體" }
+          # ----------------------------------
+          # 區塊 1：頂部 Hero 大海報區
+          # ----------------------------------
+          - { label: "━━━ 區塊 1：頂部橫幅 ━━━", name: "sec1_divider", widget: "hidden", default: "" }
+          - { label: "頂部藍色小標籤（如：主日崇拜 時間）", name: "hero_badge", widget: "string", default: "● 主日崇拜 ｜ 逢週日上午 10:00 - 11:30" }
+          - { label: "主標題 第一行", name: "hero_title_line1", widget: "string", default: "在真道中造就生命" }
+          - { label: "主標題 第二行", name: "hero_title_line2", widget: "string", default: "在恩典中活出召命" }
+          - { label: "副標題說明內文", name: "hero_description", widget: "text", default: "以使徒信經為信仰大綱，堅持「唯獨聖經 • 唯獨恩典 • 唯獨信心 • 唯獨基督」。\n歡迎你加入靈糧家園，認識生命真理，得享永生盼望。" }
 
+          # ----------------------------------
+          # 區塊 2：OUR VISION 教會目標 (W.E.L.L.)
+          # ----------------------------------
+          - { label: "━━━ 區塊 2：W.E.L.L. 教會目標 ━━━", name: "sec2_divider", widget: "hidden", default: "" }
+          - { label: "區塊標題", name: "well_title", widget: "string", default: "W.E.L.L. 教會目標" }
+          - { label: "區塊副標題", name: "well_subtitle", widget: "string", default: "扎根聖經真理，建立榮神益人的信仰群體" }
+          
           # W - Worship
           - { label: "【W】標題", name: "w_title", widget: "string", default: "Worship 敬拜" }
           - { label: "【W】副標題", name: "w_tagline", widget: "string", default: "以心靈誠實回應恩典" }
-          - { label: "【W】內文說明", name: "w_desc", widget: "text", default: "透過主日崇拜與同心禱告，將榮耀歸於三一上帝，建立以基督為中心的敬拜生活。" }
+          - { label: "【W】說明內文", name: "w_desc", widget: "text", default: "透過主日崇拜與同心禱告，將榮耀歸於三一上帝，建立以基督為中心的敬拜生活。" }
 
           # E - Evangelism
           - { label: "【E】標題", name: "e_title", widget: "string", default: "Evangelism 宣教" }
           - { label: "【E】副標題", name: "e_tagline", widget: "string", default: "走進社區傳揚福音" }
-          - { label: "【E】內文說明", name: "e_desc", widget: "text", default: "立足荃灣社區，實踐主耶穌基督的大使命，向鄰舍見證主愛，引導人得著救恩。" }
+          - { label: "【E】說明內文", name: "e_desc", widget: "text", default: "立足荃灣社區，實踐主耶穌基督的大使命，向鄰舍見證主愛，引導人得著救恩。" }
 
           # L - Love
           - { label: "【L】標題", name: "l1_title", widget: "string", default: "Love 關愛" }
           - { label: "【L】副標題", name: "l1_tagline", widget: "string", default: "在主愛中彼此扶持" }
-          - { label: "【L】內文說明", name: "l1_desc", widget: "text", default: "實踐重價恩典的團契生活，彼此體恤照顧、同經風雨，展現屬靈家庭的溫暖與同行。" }
+          - { label: "【L】說明內文", name: "l1_desc", widget: "text", default: "實踐重價恩典的團契生活，彼此體恤照顧、同經風雨，展現屬靈家庭的溫暖與同行。" }
 
           # L - Learn
           - { label: "【L】標題", name: "l2_title", widget: "string", default: "Learn 學習" }
           - { label: "【L】副標題", name: "l2_tagline", widget: "string", default: "在真道上恆常造就" }
-          - { label: "【L】內文說明", name: "l2_desc", widget: "text", default: "勤讀聖經真理，開辦主日學與門徒培育課程，讓生命在真道上扎根成長。" }
+          - { label: "【L】說明內文", name: "l2_desc", widget: "text", default: "勤讀聖經真理，開辦主日學與門徒培育課程，讓生命在真道上扎根成長。" }
 
-          # 名言引用區塊
-          - { label: "💬 下方名言內容", name: "quote", widget: "text", default: "廉價的恩典乃教會的死敵……重價的恩典是埋藏在地裏的寶貝，人為這寶貝的緣故，就歡歡喜喜去賣掉他一切所有的。" }
-          - { label: "👤 名言作者", name: "quote_author", widget: "string", default: "德國信義宗神學家 潘霍華牧師" }
+          # 名言引言
+          - { label: "💬 金句/名言內容", name: "quote_text", widget: "text", default: "廉價的恩典乃教會的死敵……重價的恩典是埋藏在地裏的寶貝，人為這寶貝的緣故，就歡歡喜喜去賣掉他一切所有的。" }
+          - { label: "👤 金句作者", name: "quote_author", widget: "string", default: "— 德國信義宗神學家 潘霍華牧師" }
+
+          # ----------------------------------
+          # 區塊 3：SCHEDULE 恆常聚會時間
+          # ----------------------------------
+          - { label: "━━━ 區塊 3：恆常聚會時間 ━━━", name: "sec3_divider", widget: "hidden", default: "" }
+          - { label: "聚會列表", name: "schedule_list", widget: "list", fields:
+              - { label: "聚會名稱", name: "name", widget: "string" }
+              - { label: "簡介說明", name: "desc", widget: "string" }
+              - { label: "時間標籤", name: "time", widget: "string" }
+            }
+
+          # ----------------------------------
+          # 區塊 4：BULLETIN & SUPPORT 週刊與奉獻
+          # ----------------------------------
+          - { label: "━━━ 區塊 4：奉獻支持資訊 ━━━", name: "sec4_divider", widget: "hidden", default: "" }
+          - { label: "奉獻說明文字", name: "donation_desc", widget: "text", default: "支持教會事工透過轉數快 (FPS) 或銀行轉帳。如需年終結免稅收據，請於入數後將收條截圖發送至幹事處。" }
+          - { label: "轉數快 (FPS) 識別碼", name: "fps_id", widget: "string", default: "fps@rhenish-twc.org" }
+          - { label: "戶口名稱", name: "bank_account_name", widget: "string", default: "中華基督教禮賢會荃灣堂" }
+
+          # ----------------------------------
+          # 區塊 5：VISIT & CONNECT 聯絡與惡劣天氣安排
+          # ----------------------------------
+          - { label: "━━━ 區塊 5：聯絡資訊與天氣安排 ━━━", name: "sec5_divider", widget: "hidden", default: "" }
+          - { label: "堂會地址", name: "address", widget: "string", default: "香港新界荃灣（鄰近荃灣港鐵站）" }
+          - { label: "電話查詢", name: "phone", widget: "string", default: "2149 6440" }
+          - { label: "電郵聯絡", name: "email", widget: "string", default: "info@rhenish-twc.org" }
+          - { label: "惡劣天氣指引標題", name: "weather_title", widget: "string", default: "惡劣天氣聚會安排指引" }
+          - { label: "惡劣天氣指引內容", name: "weather_desc", widget: "text", default: "若天文台於主日早上 8:00 仍懸掛八號或以上風球、或發出黑色暴雨警告信號，實體主日崇拜將會暫停，改為網上聚會或另行通告。" }
 
   # ==========================================
-  # 2. 定期發布內容（週刊、公告、講道）
+  # 2. 定期發布（週刊、最新消息、講道）
   # ==========================================
   - name: "bulletins"
-    label: "📰 每週週刊 (PDF)"
+    label: "📰 上傳每週週刊 (PDF)"
     folder: "content/bulletins"
     create: true
     format: "json"
@@ -65,7 +106,7 @@ collections:
       - { label: "週刊 PDF 檔案", name: "pdf_file", widget: "file", choose_url: false }
 
   - name: "announcements"
-    label: "📢 最新消息與公告"
+    label: "📢 發布最新消息與公告"
     folder: "content/announcements"
     create: true
     format: "json"
@@ -77,7 +118,7 @@ collections:
       - { label: "公告詳細內容", name: "body", widget: "markdown" }
 
   - name: "sermons"
-    label: "🎥 主日講道影音"
+    label: "🎥 新增主日講道影音"
     folder: "content/sermons"
     create: true
     format: "json"
